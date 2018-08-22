@@ -1,21 +1,33 @@
 import pygame
 
 class keyInput:
-    
-    kW = False
     kA = False
     kS = False
     kD = False
+    kF = False
+    def update(self):
+        kA = False
+        kS = False
+        kD = False
+        kF = False
     
-    def __init__(self):
-        print("active")
-
-
-        
     def down(self, event):
-        if event.key == pygame.K_w:
-            self.kW = True
+        if event.key == pygame.K_a:
+            self.kA = True
+        if event.key == pygame.K_s:
+            self.kS = True
+        if event.key == pygame.K_d:
+            self.kD = True
+        if event.key == pygame.K_f:
+            self.kF = True
+
 
     def up(self, event):
-        if event.key == pygame.K_w:
-            self.kW = False
+        if event.key == pygame.K_a:
+            self.kA = False
+        if event.key == pygame.K_s:
+            self.kS = False
+        if event.key == pygame.K_d:
+            self.kD= False
+        if event.key == pygame.K_f:
+            self.kF = False
